@@ -1,0 +1,22 @@
+implementa una API REST en Node.js + Express para la gestión de usuarios. Incluye endpoints para listar, crear y actualizar usuarios.
+Los datos iniciales se encuentran en data/user.js.
+
+Instalación:
+git clone <URL_DEL_REPO_BACKEND>
+cd user-api-backend
+
+Instalar dependencias:
+npm install
+
+Ejecución:
+npm run dev
+
+El servidor se ejecuta en:
+http://localhost:3000
+
+Estructura del proyecto:
+user-api-backend/
+index.js
+data/user.js
+package.json
+README.md
