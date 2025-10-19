@@ -2,7 +2,7 @@ implementa una API REST en Node.js + Express para la gestión de usuarios. Inclu
 Los datos iniciales se encuentran en data/user.js.
 
 Instalación:
-git clone <URL_DEL_REPO_BACKEND>
+git clone <https://github.com/viccelis/user-api-backend.git>
 cd user-api-backend
 
 Instalar dependencias:
