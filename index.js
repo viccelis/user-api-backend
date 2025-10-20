@@ -32,8 +32,8 @@ app.get("/user", (req, res) => {
 
 app.get("/user/:id", (req, res) => {
   const { id } = req.params;
-  const product = user.find((product) => product.id === id);
-  if (!product) {
+  const user = user.find((user) => user.id === id);
+  if (!user) {
     return res.status(404).json({
       message: "user no encontrado",
       timestamp: new Date().toISOString(),
@@ -44,14 +44,14 @@ app.get("/user/:id", (req, res) => {
     message: "User encontrado",
     timestamp: new Date().toISOString(),
     status: "success",
-    product: product,
+    user: user,
   });
 });
 
 // create user
 app.post("/user", (req, res) => {
   const { name, phone, email, address, age, photoUrl } = req.body;
-  const product = {
+  const user = {
     id: (user.length + 1).toString(),
     name,
     phone,
@@ -60,12 +60,12 @@ app.post("/user", (req, res) => {
     age,
     photoUrl,
   };
-  user.push(product);
+  user.push(user);
   res.json({
     message: "user creado",
     timestamp: new Date().toISOString(),
     status: "success",
-    product: product,
+    user: user,
   });
 });
 
@@ -73,21 +73,21 @@ app.post("/user", (req, res) => {
 app.put("/user/:id", (req, res) => {
   const { id } = req.params;
   const { name, phone } = req.body;
-  const product = user.find((product) => product.id === id);
-  if (!product) {
+  const user = user.find((user) => user.id === id);
+  if (!user) {
     return res.status(404).json({
       message: "user no encontrado",
       timestamp: new Date().toISOString(),
       status: "error",
     });
   }
-  product.name = name;
-  product.phone = phone;
+  user.name = name;
+  user.phone = phone;
   res.json({
     message: "user actualizado",
     timestamp: new Date().toISOString(),
     status: "success",
-    product: product,
+    user: user,
   });
 });
 
